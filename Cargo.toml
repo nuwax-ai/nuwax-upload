@@ -1,0 +1,25 @@
+[package]
+name = "nuwax-upload"
+version = "0.1.0"
+edition = "2024"
+description = "Upload files to MinIO (S3-compatible) storage"
+license = "MIT"
+authors = ["soddygo <soddygo@qq.com>"]
+
+[[bin]]
+name = "nuwax-upload"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive", "env"] }
+rust-s3 = { version = "0.37", default-features = false, features = ["tokio-rustls-tls"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "fs"] }
+chrono = "0.4"
+anyhow = "1.0"
+thiserror = "2.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+walkdir = "2"
+mime_guess2 = "2.3"
+indicatif = "0.18"
+futures = "0.3"
