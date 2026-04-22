@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "Upload files to MinIO (S3-compatible) storage"
 license = "MIT"
+repository = "https://github.com/soddygo/nuwax-upload"
 authors = ["soddygo <soddygo@qq.com>"]
 
 [[bin]]
@@ -23,3 +24,20 @@ walkdir = "2"
 mime_guess2 = "2.3"
 indicatif = "0.18"
 futures = "0.3"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
+
+[workspace.metadata.dist]
+cargo-dist-version = "0.31.0"
+ci = ["github"]
+installers = ["npm"]
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "x86_64-apple-darwin",
+    "aarch64-apple-darwin",
+    "x86_64-pc-windows-msvc",
+]
+publish-jobs = ["npm"]
