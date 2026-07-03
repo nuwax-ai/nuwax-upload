@@ -1,5 +1,5 @@
 # Release workflow (stable) — builds native binaries for each platform and
-# publishes per-platform npm sub-packages (@nuwax-upload/<platform>, each
+# publishes per-platform npm sub-packages (nuwax-upload-<platform>, each
 # embedding its binary), then the lightweight main package (nuwax-upload).
 # All packages get the default `latest` dist-tag.
 #
@@ -84,7 +84,6 @@ jobs:
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@nuwax-upload'
 
       - name: Publish sub-package (@latest)
         env:

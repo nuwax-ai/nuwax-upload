@@ -10,11 +10,11 @@ import { dirname, join } from 'node:path';
 
 // 平台键(process.platform-process.arch)→ 子包名 映射
 const PLATFORM_PKG = {
-  'darwin-arm64': '@nuwax-upload/darwin-arm64',
-  'darwin-x64': '@nuwax-upload/darwin-x64',
-  'linux-arm64': '@nuwax-upload/linux-arm64',
-  'linux-x64': '@nuwax-upload/linux-x64',
-  'win32-x64': '@nuwax-upload/win32-x64',
+  'darwin-arm64': 'nuwax-upload-darwin-arm64',
+  'darwin-x64': 'nuwax-upload-darwin-x64',
+  'linux-arm64': 'nuwax-upload-linux-arm64',
+  'linux-x64': 'nuwax-upload-linux-x64',
+  'win32-x64': 'nuwax-upload-win32-x64',
 };
 
 const key = `${process.platform}-${process.arch}`;

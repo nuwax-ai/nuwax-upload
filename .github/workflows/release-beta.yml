@@ -80,7 +80,6 @@ jobs:
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@nuwax-upload'
 
       # --tag beta keeps `latest` clean — npm defaults to `latest` even for
       # pre-release versions, which would otherwise hijack the stable channel.

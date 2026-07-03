@@ -45,7 +45,7 @@ if (mode === 'main') {
     }
   }
   const out = render('sub-package.json', {
-    __NAME__: `@nuwax-upload/${SUB}`,
+    __NAME__: `nuwax-upload-${SUB}`,
     __VERSION__: version,
     __OS__: NPM_OS,
     __CPU__: NPM_CPU,
