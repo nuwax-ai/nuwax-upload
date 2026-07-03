@@ -1,6 +1,6 @@
 [package]
 name = "nuwax-upload"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2024"
 description = "Upload files to MinIO (S3-compatible) storage"
 license = "MIT"
@@ -25,20 +25,7 @@ mime_guess2 = "2.3"
 indicatif = "0.18"
 futures = "0.3"
 
-# The profile that 'dist' will build with
-[profile.dist]
-inherits = "release"
+# Release build profile: thin LTO + single codegen unit for a smaller, faster binary.
+[profile.release]
 lto = "thin"
-
-[workspace.metadata.dist]
-cargo-dist-version = "0.31.0"
-ci = ["github"]
-installers = ["npm"]
-targets = [
-    "x86_64-unknown-linux-gnu",
-    "aarch64-unknown-linux-gnu",
-    "x86_64-apple-darwin",
-    "aarch64-apple-darwin",
-    "x86_64-pc-windows-msvc",
-]
-publish-jobs = ["npm"]
+codegen-units = 1

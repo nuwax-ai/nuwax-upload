@@ -1,0 +1,9 @@
+{
+  "name": "__NAME__",
+  "version": "__VERSION__",
+  "description": "nuwax-upload native binary for __NAME__",
+  "license": "MIT",
+  "os": ["__OS__"],
+  "cpu": ["__CPU__"],
+  "files": ["__FILE__"]
+}

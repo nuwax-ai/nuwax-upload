@@ -4,8 +4,20 @@ Upload files and directories to MinIO (S3-compatible) storage.
 
 ## Install
 
+### npm (recommended)
+
 ```bash
-make install    # cargo install --path . (recommended)
+npm install -g nuwax-upload
+# or run without installing:
+npx nuwax-upload <PATHS>...
+```
+
+Pre-built native binaries ship inside per-platform npm sub-packages, so there is no Rust toolchain or GitHub download required.
+
+### From source
+
+```bash
+make install    # cargo install --path .
 # or
 make build      # cargo build --release
 # then move target/release/nuwax-upload to your PATH

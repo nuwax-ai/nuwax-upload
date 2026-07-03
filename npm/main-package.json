@@ -1,0 +1,26 @@
+{
+  "name": "nuwax-upload",
+  "version": "__VERSION__",
+  "description": "Upload files and directories to MinIO (S3-compatible) storage",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuwax-ai/nuwax-upload"
+  },
+  "bin": {
+    "nuwax-upload": "shim.mjs"
+  },
+  "files": [
+    "shim.mjs"
+  ],
+  "optionalDependencies": {
+    "@nuwax-upload/darwin-arm64": "__VERSION__",
+    "@nuwax-upload/darwin-x64": "__VERSION__",
+    "@nuwax-upload/linux-arm64": "__VERSION__",
+    "@nuwax-upload/linux-x64": "__VERSION__",
+    "@nuwax-upload/win32-x64": "__VERSION__"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
