@@ -14,7 +14,7 @@ const PLATFORM_PKG = {
   'darwin-x64': 'nuwax-upload-darwin-x64',
   'linux-arm64': 'nuwax-upload-linux-arm64',
   'linux-x64': 'nuwax-upload-linux-x64',
-  'win32-x64': 'nuwax-upload-win32-x64',
+  'win32-x64': 'nuwax-upload-windows-x64',
 };
 
 const key = `${process.platform}-${process.arch}`;

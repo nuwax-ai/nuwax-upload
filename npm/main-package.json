@@ -18,7 +18,7 @@
     "nuwax-upload-darwin-x64": "__VERSION__",
     "nuwax-upload-linux-arm64": "__VERSION__",
     "nuwax-upload-linux-x64": "__VERSION__",
-    "nuwax-upload-win32-x64": "__VERSION__"
+    "nuwax-upload-windows-x64": "__VERSION__"
   },
   "engines": {
     "node": ">=18"
