@@ -39,7 +39,7 @@ jobs:
         include:
           - { target: x86_64-unknown-linux-gnu,  runner: ubuntu-22.04, sub: linux-x64,    npm_os: linux,  npm_cpu: x64,   bin: nuwax-upload }
           - { target: aarch64-unknown-linux-gnu, runner: ubuntu-24.04-arm, sub: linux-arm64, npm_os: linux, npm_cpu: arm64, bin: nuwax-upload }
-          - { target: x86_64-apple-darwin,       runner: macos-13,     sub: darwin-x64,   npm_os: darwin, npm_cpu: x64,   bin: nuwax-upload }
+          - { target: x86_64-apple-darwin,       runner: macos-14,     sub: darwin-x64,   npm_os: darwin, npm_cpu: x64,   bin: nuwax-upload }
           - { target: aarch64-apple-darwin,      runner: macos-14,     sub: darwin-arm64, npm_os: darwin, npm_cpu: arm64, bin: nuwax-upload }
           - { target: x86_64-pc-windows-msvc,    runner: windows-2022, sub: windows-x64, npm_os: win32, npm_cpu: x64,   bin: nuwax-upload.exe }
     runs-on: ${{ matrix.runner }}
