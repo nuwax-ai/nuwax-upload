@@ -146,7 +146,7 @@ jobs:
           for d in bins/bin-*/; do
             sub=$(basename "$d" | sed 's/^bin-//')
             if [[ "$sub" == windows-* ]]; then
-              ( cd "$d" && zip -q "../../release/nuwax-upload-${sub}.zip" . )
+              ( cd "$d" && zip -rq "../../release/nuwax-upload-${sub}.zip" . )
             else
               tar -czf "release/nuwax-upload-${sub}.tar.gz" -C "$d" .
             fi
